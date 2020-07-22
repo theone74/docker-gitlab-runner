@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [[ ! -e /etc/gitlab-runner/config.toml ]]; then
-    gitlab-ci-multi-runner register --non-interactive && \
-        gitlab-ci-multi-runner "$@"
+    /usr/local/bin/gitlab-runner register --non-interactive && \
+        /usr/local/bin/gitlab-runner "$@"
 else
-    gitlab-ci-multi-runner "$@"
+    /usr/local/bin/gitlab-runner "$@"
 fi
